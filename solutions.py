@@ -153,3 +153,4 @@ class Solution:
             else:
                 result -= former_letter_nb
         return result + dict_normal[s[-1]]
+
