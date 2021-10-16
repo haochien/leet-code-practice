@@ -23,7 +23,9 @@ def solution_input():
                  'palindrome_number_my': [solution.palindrome_number_my, 121],
                  'palindrome_number_ans1': [solution.palindrome_number_ans1, 121],
                  'palindrome_number_ans2': [solution.palindrome_number_ans2, 121],
-                 'palindrome_number_ans3': [solution.palindrome_number_ans3, 121],}
+                 'palindrome_number_ans3': [solution.palindrome_number_ans3, 121],
+                 'roman_to_integer_my': [solution.roman_to_integer_my, 'MCMXCIV'],
+                 'roman_to_integer_ans1': [solution.roman_to_integer_ans1, 'MCMXCIV'],}
     return questions
 
 
@@ -33,5 +35,5 @@ def main(q_name):
 
 
 if __name__ == '__main__':
-    main('palindrome_number_ans3')
+    main('roman_to_integer_ans1')
 
