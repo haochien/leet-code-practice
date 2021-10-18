@@ -9,7 +9,7 @@ def execute_solution(questions, q_name):
     solution = questions[q_name][0](*arg)
     end = timer()
     print("===================")
-    print(f"solution: {solution} \nExecuting Time: {start-end} seconds")
+    print(f"solution: {solution} \nExecuting Time: {(end-start)/0.001} ms")
     print("===================")
 
 
@@ -25,7 +25,10 @@ def solution_input():
                  'palindrome_number_ans2': [solution.palindrome_number_ans2, 121],
                  'palindrome_number_ans3': [solution.palindrome_number_ans3, 121],
                  'roman_to_integer_my': [solution.roman_to_integer_my, 'MCMXCIV'],
-                 'roman_to_integer_ans1': [solution.roman_to_integer_ans1, 'MCMXCIV'],}
+                 'roman_to_integer_ans1': [solution.roman_to_integer_ans1, 'MCMXCIV'],
+                 'longest_common_prefix_my': [solution.longest_common_prefix_my, ["flower","flow","flight"]],
+                 'longest_common_prefix_ans1': [solution.longest_common_prefix_ans1, ["flower","flow","flight"]],
+                 'longest_common_prefix_ans2': [solution.longest_common_prefix_ans2, ["flower","flow","flight"]],}
     return questions
 
 
@@ -35,5 +38,5 @@ def main(q_name):
 
 
 if __name__ == '__main__':
-    main('roman_to_integer_ans1')
+    main('longest_common_prefix_ans1')
 
