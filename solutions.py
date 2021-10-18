@@ -154,3 +154,55 @@ class Solution:
                 result -= former_letter_nb
         return result + dict_normal[s[-1]]
 
+
+    def longest_common_prefix_my(self, strs: List[str]) -> str:
+        """
+        LeetCode Question Nr.14
+        Write a function to find the longest common prefix string amongst an array of strings.
+        If there is no common prefix, return an empty string "".
+
+        Input: strs=["flower","flow","flight"]  Output: "fl"
+        """
+        shortest_str_len = min([len(word) for word in strs])
+        if shortest_str_len == 0:
+            return ''
+
+        str_index = 0
+        results = ''
+        while str_index <= shortest_str_len-1:
+            #if all([word[str_index] == strs[0][str_index] for word in strs]):
+            if len(set([word[str_index] for word in strs])) == 1:
+                results += strs[0][str_index]
+                str_index += 1
+            else:
+                break
+        return results
+
+
+    def longest_common_prefix_ans1(self, strs: List[str]) -> str:
+        """
+        With zip
+        https://leetcode.com/problems/longest-common-prefix/discuss/6911/Simple-Python-solution
+        """
+
+        result = ''
+        for letter_set in zip(*strs):
+            if len(letter_set) == 1:
+                result += letter_set[0]
+            else:
+                break
+
+        return result
+
+
+    def longest_common_prefix_ans2(self, strs: List[str]) -> str:
+        """
+        With enumerate and loop
+        https://leetcode.com/problems/longest-common-prefix/discuss/6918/Short-Python-Solution
+        """
+        shortest_word = min(strs, key=len)
+        for index, letter in enumerate(shortest_word):
+            for word in strs:
+                if letter != word[index]:
+                    return shortest_word[:index]
+        return shortest_word
