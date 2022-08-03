@@ -1,4 +1,4 @@
-import solutions
+from solutions import *
 from timeit import default_timer as timer
 
 
@@ -14,27 +14,27 @@ def execute_solution(questions, q_name):
 
 
 def solution_input():
-    solution = solutions.Solution()
 
     # questions = {question_name: [function, *function_arg]}
-    questions = {'twoSum_my': [solution.twoSum_my, [2, 7, 11, 15], 9],
-                 'twoSum_ans1': [solution.twoSum_ans1, [2, 7, 11, 15], 9],
-                 'twoSum_ans2': [solution.twoSum_ans2, [2, 7, 11, 15], 9],
+    questions = {'twoSum_0': [TwoSum.my_solution, [2, 7, 11, 15], 9],
+                 'twoSum_1': [TwoSum.great_ans1, [2, 7, 11, 15], 18],
+                 'twoSum_2': [TwoSum.great_ans2, [2, 7, 11, 15], 9],
 
-                 'palindrome_number_my': [solution.palindrome_number_my, 121],
-                 'palindrome_number_ans1': [solution.palindrome_number_ans1, 121],
-                 'palindrome_number_ans2': [solution.palindrome_number_ans2, 121],
-                 'palindrome_number_ans3': [solution.palindrome_number_ans3, 121],
+                 'palindrome_number_0': [PalindromeNumber.my_solution, 121],
+                 'palindrome_number_1': [PalindromeNumber.great_ans1, 122],
+                 'palindrome_number_2': [PalindromeNumber.great_ans2, 121],
+                 'palindrome_number_3': [PalindromeNumber.great_ans3, 121],
 
-                 'roman_to_integer_my': [solution.roman_to_integer_my, 'MCMXCIV'],
-                 'roman_to_integer_ans1': [solution.roman_to_integer_ans1, 'MCMXCIV'],
+                 'roman_to_integer_0': [RomanToInteger.my_solution, 'MCMXCIV'],
+                 'roman_to_integer_1': [RomanToInteger.great_ans1, 'MCMXCIV'],
 
-                 'longest_common_prefix_my': [solution.longest_common_prefix_my, ["flower","flow","flight"]],
-                 'longest_common_prefix_ans1': [solution.longest_common_prefix_ans1, ["flower","flow","flight"]],
-                 'longest_common_prefix_ans2': [solution.longest_common_prefix_ans2, ["flower","flow","flight"]],
+                 'longest_common_prefix_0': [LongestCommonPrefix.my_solution, ["flower","flow","flight"]],
+                 'longest_common_prefix_1': [LongestCommonPrefix.great_ans1, ["flower","flow","flight"]],
+                 'longest_common_prefix_2': [LongestCommonPrefix.great_ans2, ["flower","flow","flight"]],
 
-                 'valid_parentheses_my': [solution.valid_parentheses_my, "((([]){}))"],
-                 'valid_parentheses_ans1': [solution.valid_parentheses_ans1, "()"],}
+                 'valid_parentheses_0': [ValidParentheses.my_solution, "((([]){}))"],
+                 'valid_parentheses_1': [ValidParentheses.great_ans1, "()"],
+                 }
     return questions
 
 
@@ -44,5 +44,6 @@ def main(q_name):
 
 
 if __name__ == '__main__':
-    main('valid_parentheses_ans1')
+    # input question name you want to execute as argument
+    main('valid_parentheses_1')
 
