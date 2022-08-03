@@ -206,3 +206,69 @@ class Solution:
                 if letter != word[index]:
                     return shortest_word[:index]
         return shortest_word
+
+
+    def valid_parentheses_my(self, s: str) -> bool:
+        """
+        LeetCode Question Nr.20
+        Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
+        An input string is valid if:
+            Open brackets must be closed by the same type of brackets.
+            Open brackets must be closed in the correct order.
+
+        Input: s = "{[]}"  Output: true
+        Input: s = "([)]"  Output: false
+        Input: s = "()[]{}"  Output: true
+        """
+
+        ## technic used: stack
+
+        if len(s) <= 1:
+            return False
+
+        stack = []
+        end_bracket_dict = {"]":"[", "}":"{", ")":"("}
+
+        for char in s:
+            if char in end_bracket_dict.values():
+                stack.append(char)
+            elif char in end_bracket_dict.keys():
+                if len(stack) == 0 or end_bracket_dict[char] != stack.pop():
+                    return False
+            else:
+                return False
+        return stack == []   # to avoid something like "(("
+    
+
+    def valid_parentheses_ans1(self, s: str) -> bool:
+        """
+        https://leetcode.com/problems/valid-parentheses/discuss/316753/Python-4ms-Faster-then-100-with-explanation
+        """
+
+        ## technic used: stack
+        
+        if len(s) <= 1:
+            return False
+
+        stack = []
+        start_bracket_dict = {"[":"]", "{":"}", "(":")"}
+
+        for char in s:
+            if char in start_bracket_dict.keys():
+                stack.append(char)
+            elif char in start_bracket_dict.values():
+                if len(stack) == 0 or char != start_bracket_dict[stack.pop()]:
+                    return False
+            else:
+                return False
+        
+        return stack == []
+
+
+
+
+
+
+
+
+

@@ -20,15 +20,21 @@ def solution_input():
     questions = {'twoSum_my': [solution.twoSum_my, [2, 7, 11, 15], 9],
                  'twoSum_ans1': [solution.twoSum_ans1, [2, 7, 11, 15], 9],
                  'twoSum_ans2': [solution.twoSum_ans2, [2, 7, 11, 15], 9],
+
                  'palindrome_number_my': [solution.palindrome_number_my, 121],
                  'palindrome_number_ans1': [solution.palindrome_number_ans1, 121],
                  'palindrome_number_ans2': [solution.palindrome_number_ans2, 121],
                  'palindrome_number_ans3': [solution.palindrome_number_ans3, 121],
+
                  'roman_to_integer_my': [solution.roman_to_integer_my, 'MCMXCIV'],
                  'roman_to_integer_ans1': [solution.roman_to_integer_ans1, 'MCMXCIV'],
+
                  'longest_common_prefix_my': [solution.longest_common_prefix_my, ["flower","flow","flight"]],
                  'longest_common_prefix_ans1': [solution.longest_common_prefix_ans1, ["flower","flow","flight"]],
-                 'longest_common_prefix_ans2': [solution.longest_common_prefix_ans2, ["flower","flow","flight"]],}
+                 'longest_common_prefix_ans2': [solution.longest_common_prefix_ans2, ["flower","flow","flight"]],
+
+                 'valid_parentheses_my': [solution.valid_parentheses_my, "((([]){}))"],
+                 'valid_parentheses_ans1': [solution.valid_parentheses_ans1, "()"],}
     return questions
 
 
@@ -38,5 +44,5 @@ def main(q_name):
 
 
 if __name__ == '__main__':
-    main('longest_common_prefix_ans1')
+    main('valid_parentheses_ans1')
 
