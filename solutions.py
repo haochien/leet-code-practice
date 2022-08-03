@@ -1,8 +1,9 @@
 from typing import List
 
 
-class Solution:
-    def twoSum_my(self, nums: List[int], target: int) -> List[int]:
+class TwoSum:
+    @staticmethod
+    def my_solution(nums: List[int], target: int) -> List[int]:
         """
         LeetCode Question Nr.1
         Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
@@ -18,8 +19,8 @@ class Solution:
                     results.extend([i, i+j])
         return results
 
-
-    def twoSum_ans1(self, nums: List[int], target: int) -> List[int]:
+    @staticmethod
+    def great_ans1(nums: List[int], target: int) -> List[int]:
         """
         https://leetcode.com/problems/two-sum/discuss/737092/Sum-MegaPost-Python3-Solution-with-a-detailed-explanation
         """
@@ -32,8 +33,8 @@ class Solution:
             else:
                 results[val] = i
 
-
-    def twoSum_ans2(self, nums: List[int], target: int) -> List[int]:
+    @staticmethod
+    def great_ans2(nums: List[int], target: int) -> List[int]:
         """
         In case nums has been already ascendingly sorted
         """
@@ -49,7 +50,9 @@ class Solution:
                     right_index -= 1
 
 
-    def palindrome_number_my(self, x: int) -> bool:
+class PalindromeNumber:
+    @staticmethod
+    def my_solution(x: int) -> bool:
         """
         LeetCode Question Nr.9
         Given an integer x, return true if x is palindrome integer.
@@ -68,8 +71,8 @@ class Solution:
                 return False
         return True
 
-
-    def palindrome_number_ans1(self, x: int) -> bool:
+    @staticmethod
+    def great_ans1(x: int) -> bool:
         """
         int is allowed to converted to str
         https://leetcode.com/problems/palindrome-number/discuss/785314/Python-3-greater-1-solution-is-89.20-faster.-2nd-is-99.14-faster.-Explanation-added
@@ -78,8 +81,8 @@ class Solution:
             return False
         return str(x) == str(x)[::-1]
 
-
-    def palindrome_number_ans2(self, x: int) -> bool:
+    @staticmethod
+    def great_ans2(x: int) -> bool:
         """
         int is not allowed to converted to str
         """
@@ -93,8 +96,8 @@ class Solution:
             x = x//10
         return recreate_nb == input_nb
 
-
-    def palindrome_number_ans3(self, x: int) -> bool:
+    @staticmethod
+    def great_ans3(x: int) -> bool:
         """
         int is not allowed to converted to str & Advanced and faster solution
         """
@@ -108,7 +111,9 @@ class Solution:
         return True if recreate_nb == x or recreate_nb//10 == x else False
 
 
-    def roman_to_integer_my(self, s: str) -> int:
+class RomanToInteger:
+    @staticmethod
+    def my_solution(s: str) -> int:
         """
         LeetCode Question Nr.13
         Roman numerals are represented by seven different symbols: I, V, X, L, C, D and M.
@@ -137,8 +142,8 @@ class Solution:
         sum_deduct = sum([dict_subtract[subtract_key] for subtract_key in dict_subtract.keys() if subtract_key in s])
         return sum_all - sum_deduct * 2
 
-
-    def roman_to_integer_ans1(self, s: str) -> int:
+    @staticmethod
+    def great_ans1(s: str) -> int:
         """
         https://leetcode.com/problems/roman-to-integer/discuss/6537/My-Straightforward-Python-Solution
         """
@@ -155,7 +160,9 @@ class Solution:
         return result + dict_normal[s[-1]]
 
 
-    def longest_common_prefix_my(self, strs: List[str]) -> str:
+class LongestCommonPrefix:
+    @staticmethod
+    def my_solution(strs: List[str]) -> str:
         """
         LeetCode Question Nr.14
         Write a function to find the longest common prefix string amongst an array of strings.
@@ -178,8 +185,8 @@ class Solution:
                 break
         return results
 
-
-    def longest_common_prefix_ans1(self, strs: List[str]) -> str:
+    @staticmethod
+    def great_ans1(strs: List[str]) -> str:
         """
         With zip
         https://leetcode.com/problems/longest-common-prefix/discuss/6911/Simple-Python-solution
@@ -187,15 +194,15 @@ class Solution:
 
         result = ''
         for letter_set in zip(*strs):
-            if len(letter_set) == 1:
+            if len(set(letter_set)) == 1:
                 result += letter_set[0]
             else:
                 break
 
         return result
 
-
-    def longest_common_prefix_ans2(self, strs: List[str]) -> str:
+    @staticmethod
+    def great_ans2(strs: List[str]) -> str:
         """
         With enumerate and loop
         https://leetcode.com/problems/longest-common-prefix/discuss/6918/Short-Python-Solution
@@ -208,7 +215,9 @@ class Solution:
         return shortest_word
 
 
-    def valid_parentheses_my(self, s: str) -> bool:
+class ValidParentheses:
+    @staticmethod
+    def my_solution(s: str) -> bool:
         """
         LeetCode Question Nr.20
         Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
@@ -239,14 +248,14 @@ class Solution:
                 return False
         return stack == []   # to avoid something like "(("
     
-
-    def valid_parentheses_ans1(self, s: str) -> bool:
+    @staticmethod
+    def great_ans1(s: str) -> bool:
         """
         https://leetcode.com/problems/valid-parentheses/discuss/316753/Python-4ms-Faster-then-100-with-explanation
         """
 
         ## technic used: stack
-        
+
         if len(s) <= 1:
             return False
 
