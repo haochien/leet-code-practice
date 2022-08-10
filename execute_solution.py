@@ -1,5 +1,6 @@
 from solutions import *
 from timeit import default_timer as timer
+from utils import transfer_list_to_linked_nodes
 
 
 def execute_solution(questions, q_name):
@@ -34,6 +35,8 @@ def solution_input():
 
                  'valid_parentheses_0': [ValidParentheses.my_solution, "((([]){}))"],
                  'valid_parentheses_1': [ValidParentheses.great_ans1, "()"],
+
+                'merge_two_sorted_lists': [MergeTwoSortedLists.my_solution, transfer_list_to_linked_nodes([1,2,4]), transfer_list_to_linked_nodes([1,3,4])],
                  }
     return questions
 
@@ -45,5 +48,5 @@ def main(q_name):
 
 if __name__ == '__main__':
     # input question name you want to execute as argument
-    main('valid_parentheses_1')
+    main('merge_two_sorted_lists')
 
