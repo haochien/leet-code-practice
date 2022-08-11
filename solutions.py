@@ -307,7 +307,72 @@ class MergeTwoSortedLists:
         return transfer_linked_nodes_to_list(dummy.next) # if run on leetcode server, then simply return dummy.next
 
 
+class ContainsDuplicate:
+    """
+    Given an integer array nums, return true if any value appears at least twice in the array, 
+    and return false if every element is distinct.
 
+    Input: nums = [1,2,3,1]
+    Output: true
+
+
+    Good Analysis answer: 
+    https://leetcode.com/problems/contains-duplicate/discuss/1698064/5-Different-Approaches-w-Explanations
+    """
+
+    @staticmethod
+    def my_solution(nums: List[int]) -> bool:
+        """
+        tech use : sort
+        """
+
+        # overtime solution:
+        # list append has amortized O(1) complexity for huge list (O(n) - O(n^2))
+        # https://stackoverflow.com/questions/33044883/why-is-the-time-complexity-of-pythons-list-append-method-o1
+
+        # stack = []
+        # for i in nums:
+        #     if i in stack:
+        #         return True
+        #     stack.append(i)
+        # return False
+    
+
+        nums.sort()
+        for index, i in enumerate(nums):
+            if index == len(nums) -1:
+                return False
+
+            if i == nums[index+1]:
+                return True
+        
+        return False
+
+
+    @staticmethod
+    def great_ans1(nums: List[int]) -> bool:
+        """
+        tech use: Hashmap (average : O(1)  ; worst case (collision) O(n/k))
+        https://www.youtube.com/watch?v=3OamzN90kPg
+        """
+
+        hashset = set()
+        # hashtable = {}
+
+        for i in nums:
+            if i in hashset:
+                return True
+
+            hashset.add(i)
+            # hashtable[i] = 1
+
+        return False
+
+
+        
+
+
+        
 
 
 

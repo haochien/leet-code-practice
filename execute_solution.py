@@ -36,7 +36,10 @@ def solution_input():
                  'valid_parentheses_0': [ValidParentheses.my_solution, "((([]){}))"],
                  'valid_parentheses_1': [ValidParentheses.great_ans1, "()"],
 
-                'merge_two_sorted_lists': [MergeTwoSortedLists.my_solution, transfer_list_to_linked_nodes([1,2,4]), transfer_list_to_linked_nodes([1,3,4])],
+                'merge_two_sorted_lists_0': [MergeTwoSortedLists.my_solution, transfer_list_to_linked_nodes([1,2,4]), transfer_list_to_linked_nodes([1,3,4])],
+
+                'contains_duplicate_0': [ContainsDuplicate.my_solution, [1,2,3,1]],
+                'contains_duplicate_1': [ContainsDuplicate.great_ans1, [0,0,1,2,3]],
                  }
     return questions
 
@@ -48,5 +51,5 @@ def main(q_name):
 
 if __name__ == '__main__':
     # input question name you want to execute as argument
-    main('merge_two_sorted_lists')
+    main('contains_duplicate_1')
 
