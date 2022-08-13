@@ -46,6 +46,8 @@ def solution_input():
                  'vali_palindrome_2': [ValidPalindrome.great_ans2, "A man, a plan, a canal: Panama"],
 
                  'valid_anagram_0': [ValidAnagram.my_solution, "rat", "car"],
+                 'valid_anagram_1': [ValidAnagram.great_ans1, "anagram", "nagaram"],
+                 'valid_anagram_2': [ValidAnagram.great_ans2, "anagram", "nagaram"],
                 }
     return questions
 
@@ -57,5 +59,5 @@ def main(q_name):
 
 if __name__ == '__main__':
     # input question name you want to execute as argument
-    main('valid_anagram_0')
+    main('valid_anagram_2')
 
