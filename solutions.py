@@ -442,6 +442,39 @@ class ValidPalindrome:
         return lst_s == lst_s[::-1]
         
 
+class ValidAnagram:
+    """
+    Given two strings s and t, return true if t is an anagram of s, and false otherwise.
+    An Anagram is a word or phrase formed by rearranging the letters of a different word or phrase, 
+    typically using all the original letters exactly once.
+
+    Input: s = "anagram", t = "nagaram"
+    Output: true
+    """
+
+    @staticmethod
+    def my_solution(self, s: str, t: str) -> bool:
+        s_sort = [i for i in s].sort()
+        t_sort = [i for i in t].sort()
+        return s_sort == t_sort
+        
+
+
+
+    @staticmethod
+    def great_ans1(s: str) -> bool:
+        """
+        tech use : 
+        """
+
+        return True
+    
+
+    @staticmethod
+    def great_ans2(s: str) -> bool:
+        return True
+        
+
 
 
 
