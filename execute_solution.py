@@ -48,6 +48,9 @@ def solution_input():
                  'valid_anagram_0': [ValidAnagram.my_solution, "rat", "car"],
                  'valid_anagram_1': [ValidAnagram.great_ans1, "anagram", "nagaram"],
                  'valid_anagram_2': [ValidAnagram.great_ans2, "anagram", "nagaram"],
+
+                 'binary_search_0': [BinarySearch.my_solution, [-1,0,3,5,9,12], 2],
+                 'binary_search_1': [BinarySearch.great_ans1, [-1,0,3,5,9,12], 2],
                 }
     return questions
 
@@ -59,5 +62,5 @@ def main(q_name):
 
 if __name__ == '__main__':
     # input question name you want to execute as argument
-    main('valid_anagram_2')
+    main('binary_search_0')
 
