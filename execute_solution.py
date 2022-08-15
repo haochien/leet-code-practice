@@ -51,6 +51,9 @@ def solution_input():
 
                  'binary_search_0': [BinarySearch.my_solution, [-1,0,3,5,9,12], 2],
                  'binary_search_1': [BinarySearch.great_ans1, [-1,0,3,5,9,12], 2],
+
+                 'best_time_to_buy_and_sell_stock_0': [BestTimeToBuyAndSellStock.my_solution, [7,1,5,3,6,4]],
+                 'best_time_to_buy_and_sell_stock_1': [BestTimeToBuyAndSellStock.great_ans1, [7,1,5,3,6,4]],
                 }
     return questions
 
@@ -62,5 +65,5 @@ def main(q_name):
 
 if __name__ == '__main__':
     # input question name you want to execute as argument
-    main('binary_search_0')
+    main('best_time_to_buy_and_sell_stock_1')
 
