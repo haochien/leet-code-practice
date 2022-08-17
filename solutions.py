@@ -643,38 +643,31 @@ class SingleNumber:
     Output: 4
     """
 
-    
-
     @staticmethod
     def my_solution(nums: List[int]) -> int:
-        i += 0
+        i = 0
         while i < len(nums)-1:
             if nums[i] not in nums[:i] and nums[i] not in nums[i+1:]:
                 return nums[i]
             i += 1
         return nums[i]
             
-        
-
-            
 
     @staticmethod
-    def great_ans1(prices: List[int]) -> int:
+    def great_ans1(nums: List[int]) -> int:
         """
-        tech use : sliding window
-        https://www.youtube.com/watch?v=1pkOgXD63yU
+        tech use : bit manipulation / XOR
+        https://leetcode.com/problems/single-number/discuss/1771771/Think-it-through-oror-Time%3A-O(n)-Space%3A-O(1)-oror-Python-Explained
+
+        XOR:
+        0^0 = 0 ; 1^1 = 0 ; 1^0 = 1
+        2^2 = 0 ; 2^3 = 5 
+        A^B^A = A^A^B : 1^2^3^2^3 = 1 ^ (2^2) ^ (3^3) = 1^0^0 = 1
+        https://accu.org/journals/overload/20/109/lewin_1915/
         """
-        l, r = 0, 1
-        max_p = 0
-
-        while r < len(prices):
-            if prices[l] < prices[r]:
-                max_p = max(prices[r] - prices[l], max_p)
-            else:
-                l = r   # shift to new lowest point 
-            
-            r += 1
-
-        return max_p   
-
-
+        
+        res = 0
+        for num in nums:
+            res = res ^ num
+        
+        return res

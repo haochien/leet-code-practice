@@ -55,8 +55,8 @@ def solution_input():
                  'best_time_to_buy_and_sell_stock_0': [BestTimeToBuyAndSellStock.my_solution, [7,1,5,3,6,4]],
                  'best_time_to_buy_and_sell_stock_1': [BestTimeToBuyAndSellStock.great_ans1, [7,1,5,3,6,4]],
 
-                 'single_number_0': [SingleNumber.my_solution, [4,1,2,1,2]],
-                 'single_number_1': [SingleNumber.great_ans1, [7,1,5,3,6,4]],
+                 'single_number_0': [SingleNumber.my_solution, [2,2,1]],
+                 'single_number_1': [SingleNumber.great_ans1, [2,2,1]],
                 }
     return questions
 
@@ -68,5 +68,5 @@ def main(q_name):
 
 if __name__ == '__main__':
     # input question name you want to execute as argument
-    main('single_number_0')
+    main('single_number_1')
 
