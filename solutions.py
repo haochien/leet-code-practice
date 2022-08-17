@@ -634,3 +634,47 @@ class BestTimeToBuyAndSellStock:
         return max_p   
 
 
+class SingleNumber:
+    """
+    Given a non-empty array of integers nums, every element appears twice except for one. Find that single one.
+    You must implement a solution with a linear runtime complexity and use only constant extra space.
+
+    Input: nums = [4,1,2,1,2]
+    Output: 4
+    """
+
+    
+
+    @staticmethod
+    def my_solution(nums: List[int]) -> int:
+        i += 0
+        while i < len(nums)-1:
+            if nums[i] not in nums[:i] and nums[i] not in nums[i+1:]:
+                return nums[i]
+            i += 1
+        return nums[i]
+            
+        
+
+            
+
+    @staticmethod
+    def great_ans1(prices: List[int]) -> int:
+        """
+        tech use : sliding window
+        https://www.youtube.com/watch?v=1pkOgXD63yU
+        """
+        l, r = 0, 1
+        max_p = 0
+
+        while r < len(prices):
+            if prices[l] < prices[r]:
+                max_p = max(prices[r] - prices[l], max_p)
+            else:
+                l = r   # shift to new lowest point 
+            
+            r += 1
+
+        return max_p   
+
+
