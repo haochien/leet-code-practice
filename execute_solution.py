@@ -1,6 +1,7 @@
 from solutions import *
 from timeit import default_timer as timer
-from utils import transfer_list_to_linked_nodes
+from utils.util_linked_list import transfer_list_to_linked_nodes
+from utils.util_tree import transfer_list_to_binary_treenode
 
 
 def execute_solution(questions, q_name):
@@ -57,6 +58,8 @@ def solution_input():
 
                  'single_number_0': [SingleNumber.my_solution, [2,2,1]],
                  'single_number_1': [SingleNumber.great_ans1, [2,2,1]],
+
+                 'same_tree_0': [SameTree.my_solution, transfer_list_to_binary_treenode([1,2,3]), transfer_list_to_binary_treenode([1,2,3])],
                 }
     return questions
 
@@ -68,5 +71,5 @@ def main(q_name):
 
 if __name__ == '__main__':
     # input question name you want to execute as argument
-    main('single_number_1')
+    main('same_tree_0')
 
