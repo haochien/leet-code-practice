@@ -1,6 +1,7 @@
 from array import array
 from typing import List
-from utils import ListNode, transfer_linked_nodes_to_list
+from utils.util_linked_list import ListNode, transfer_linked_nodes_to_list
+from utils.util_tree import BinaryTreeNode
 
 
 class TwoSum:
@@ -671,3 +672,38 @@ class SingleNumber:
             res = res ^ num
         
         return res
+
+
+class SameTree:
+    """
+    https://leetcode.com/problems/same-tree/
+    Given the roots of two binary trees p and q, write a function to check if they are the same or not.
+    Two binary trees are considered the same if they are structurally identical, and the nodes have the same value.
+
+    Input: p = [1,2,3], q = [1,2,3]
+    Output: true
+    """
+
+    @staticmethod
+    def my_solution(p: BinaryTreeNode, q: BinaryTreeNode) -> bool:
+        """
+        tech use : Depth First Search (DFS)
+        https://www.techiedelight.com/depth-first-search/
+
+        https://www.youtube.com/watch?time_continue=453&v=vRbbcKXCxOw&feature=emb_title
+        """
+
+        def _is_same_tree(p, q):
+            if not p and not q: 
+                # if both p and q are None (empty tree)
+                return True
+            
+            if not p or not q or p.val != q.val:
+                # if only one of p or q is empty or the value for both are different
+                return False
+        
+            return (_is_same_tree(p.left, q.left) and 
+                    _is_same_tree(p.right, q.right))
+        
+        return (_is_same_tree(p, q))
+        
