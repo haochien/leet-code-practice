@@ -1,4 +1,4 @@
-from problems.Array_and_Hashing.essential import ez__two_sum
+from problems.Array_and_Hashing.essential import ez__two_sum, ez__contain_duplicate
 from solutions import *
 
 from timeit import default_timer as timer
@@ -20,7 +20,10 @@ def execute_solution(questions, q_name):
 def solution_input():
 
     # questions = {question_name: [function, *function_arg]}
-    questions = {'two_sum': [ez__two_sum.TwoSum.great_ans1, [2, 7, 11, 15], 18],
+    questions = {
+                 # === Array and Hashing ===
+                 'two_sum': [ez__two_sum.TwoSum.great_ans1, [2, 7, 11, 15], 18],    # imp: ***
+                 'contains_duplicate': [ez__contain_duplicate.ContainsDuplicate.great_ans1, [0,0,1,2,3]],    # imp: **   
 
                  'palindrome_number_0': [PalindromeNumber.my_solution, 121],
                  'palindrome_number_1': [PalindromeNumber.great_ans1, 122],
@@ -38,9 +41,6 @@ def solution_input():
                  'valid_parentheses_1': [ValidParentheses.great_ans1, "()"],
 
                  'merge_two_sorted_lists_0': [MergeTwoSortedLists.my_solution, transfer_list_to_linked_nodes([1,2,4]), transfer_list_to_linked_nodes([1,3,4])],
-
-                 'contains_duplicate_0': [ContainsDuplicate.my_solution, [1,2,3,1]],
-                 'contains_duplicate_1': [ContainsDuplicate.great_ans1, [0,0,1,2,3]],
 
                  'vali_palindrome_0': [ValidPalindrome.my_solution, "A man, a plan, a canal: Panama"],
                  'vali_palindrome_1': [ValidPalindrome.great_ans1, "A man, a plan, a canal: Panama"],
@@ -71,5 +71,5 @@ def main(q_name):
 
 if __name__ == '__main__':
     # input question name you want to execute as argument
-    main('two_sum')
+    main('contains_duplicate')
 

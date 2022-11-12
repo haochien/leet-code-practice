@@ -3,6 +3,8 @@ from typing import List
 class TwoSum:
     """
     LeetCode Question Nr.1
+    https://leetcode.com/problems/two-sum/
+
     Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
     You may assume that each input would have exactly one solution, and you may not use the same element twice.
     You can return the answer in any order.
@@ -21,6 +23,10 @@ class TwoSum:
         Expination Sources:
         https://youtu.be/KLlXCFG5TnA
         https://leetcode.com/problems/two-sum/discuss/737092/Sum-MegaPost-Python3-Solution-with-a-detailed-explanation
+
+        my note: this kind of solving technique can be used in the situation that the brute-force solution causes two loops
+                 O(n^2). The usual scenario is that the second-loop checking can be avoid by looping and the checking result
+                 can be store into hash map 
         """
         prev_map = {}  # val : index
         for i, val in enumerate(nums):
