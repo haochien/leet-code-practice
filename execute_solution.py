@@ -1,4 +1,6 @@
+from problems.Array_and_Hashing.essential import ez__two_sum
 from solutions import *
+
 from timeit import default_timer as timer
 from utils.util_linked_list import transfer_list_to_linked_nodes
 from utils.util_tree import transfer_list_to_binary_treenode
@@ -18,9 +20,7 @@ def execute_solution(questions, q_name):
 def solution_input():
 
     # questions = {question_name: [function, *function_arg]}
-    questions = {'twoSum_0': [TwoSum.my_solution, [2, 7, 11, 15], 9],
-                 'twoSum_1': [TwoSum.great_ans1, [2, 7, 11, 15], 18],
-                 'twoSum_2': [TwoSum.great_ans2, [2, 7, 11, 15], 9],
+    questions = {'two_sum': [ez__two_sum.TwoSum.great_ans1, [2, 7, 11, 15], 18],
 
                  'palindrome_number_0': [PalindromeNumber.my_solution, 121],
                  'palindrome_number_1': [PalindromeNumber.great_ans1, 122],
@@ -71,5 +71,5 @@ def main(q_name):
 
 if __name__ == '__main__':
     # input question name you want to execute as argument
-    main('same_tree_0')
+    main('two_sum')
 
