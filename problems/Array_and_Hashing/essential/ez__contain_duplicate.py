@@ -21,7 +21,7 @@ class ContainsDuplicate:
     def great_ans1(nums: List[int]) -> bool:
         """
         technique: Hash Map
-        Time: O(nlogn) : looping cause O(n) and Hashmap contribute O(1) (average : O(1)  ; worst case (collision) O(n/k))
+        Time: O(n) : looping cause O(n) and Hashmap contribute O(1) (average : O(1)  ; worst case (collision) O(n/k))
         Memory: O(n)
         https://www.youtube.com/watch?v=3OamzN90kPg
         """
