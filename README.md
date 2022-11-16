@@ -29,5 +29,5 @@ The user can simply write the answer in the test_run function (and of couse chan
 
 ## Miscellaneous Note
 
-1. When deal with array problem, O(n^2) solution might be able to improve via Hashing or Sorting.
+1. When deal with array problem, O(n^2) solution might be able to improve via Hashing, Sorting, Pointer(two pointer / sliding window).
 2. Usually require pointers and while loop when facing Two Pointer or Sliding Window problems

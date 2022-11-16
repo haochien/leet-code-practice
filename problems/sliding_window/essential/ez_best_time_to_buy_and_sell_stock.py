@@ -19,7 +19,7 @@ class BestTimeToBuyAndSellStock:
     @staticmethod
     def great_ans1(prices: List[int]) -> int:
         """
-        tech use : sliding window
+        technique: sliding window
         Time: O(nlogn)
         Memory: O(1)
         https://www.youtube.com/watch?v=1pkOgXD63yU
