@@ -6,6 +6,9 @@ from problems.binary_search.essential import ez__binary_search
 from problems.bit_manipulation.essential import ez__single_value
 from problems.linked_list.essential import ez__merge_two_sorted_list
 from problems.trees.esenstial import ez__same_tree
+from problems.string_problems.essential import ez__longest_common_prefix, ez__roman_to_integer
+
+from problems.two_pointers.rest import ez__palindronme_number
 
 from solutions import *
 
@@ -39,7 +42,9 @@ def solution_input():
 
                  ## ===== Two Pointers =====
                  # imp: ***
-                 'vali_palindrome': [ez__valid_palindrome.ValidPalindrome.great_ans1, "A man, a plan, a canal: Panama"], 
+                 'vali_palindrome': [ez__valid_palindrome.ValidPalindrome.great_ans1, "A man, a plan, a canal: Panama"],
+                 # imp: *
+                 'palindrome_number': [ez__palindronme_number.PalindromeNumber.my_solution, 121], 
 
 
                  ## ===== Sliding Window =====
@@ -73,19 +78,10 @@ def solution_input():
                                transfer_list_to_binary_treenode([1,2,3])],                           
 
 
-                 'palindrome_number_0': [PalindromeNumber.my_solution, 121],
-                 'palindrome_number_1': [PalindromeNumber.great_ans1, 122],
-                 'palindrome_number_2': [PalindromeNumber.great_ans2, 121],
-                 'palindrome_number_3': [PalindromeNumber.great_ans3, 121],
-
-                 'roman_to_integer_0': [RomanToInteger.my_solution, 'MCMXCIV'],
-                 'roman_to_integer_1': [RomanToInteger.great_ans1, 'MCMXCIV'],
-
-                 'longest_common_prefix_0': [LongestCommonPrefix.my_solution, ["flower","flow","flight"]],
-                 'longest_common_prefix_1': [LongestCommonPrefix.great_ans1, ["flower","flow","flight"]],
-                 'longest_common_prefix_2': [LongestCommonPrefix.great_ans2, ["flower","flow","flight"]],
-
-                 
+                 ## ===== String Problems =====
+                 # imp: ***
+                 'longest_common_prefix': [ez__longest_common_prefix.LongestCommonPrefix.great_ans1, ["flower","flow","flight"]],
+                 'roman_to_integer': [ez__roman_to_integer.RomanToInteger.great_ans1, 'MCMXCIV'],
 
                 }
     return questions
@@ -98,5 +94,5 @@ def main(q_name):
 
 if __name__ == '__main__':
     # input question name you want to execute as argument
-    main('same_tree')
+    main('roman_to_integer')
 
