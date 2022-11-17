@@ -2,7 +2,7 @@ from typing import List
 
 class SingleNumber:
     """
-    LeetCode Question Nr.704
+    LeetCode Question Nr.136
     https://leetcode.com/problems/single-number/
 
     Given a non-empty array of integers nums, every element appears twice except for one. Find that single one.

@@ -1,9 +1,10 @@
 from problems.hashing.essential import ez__two_sum, ez__contain_duplicate, ez__valid_anagram
-from problems.two_pointers.essential import ez_valid_palindrome
-from problems.sliding_window.essential import ez_best_time_to_buy_and_sell_stock
-from problems.stack.essential import ez_valid_parentheses
-from problems.binary_search.essential import ez_binary_search
-from problems.bit_manipulation.essential import ez_single_value
+from problems.two_pointers.essential import ez__valid_palindrome
+from problems.sliding_window.essential import ez__best_time_to_buy_and_sell_stock
+from problems.stack.essential import ez__valid_parentheses
+from problems.binary_search.essential import ez__binary_search
+from problems.bit_manipulation.essential import ez__single_value
+from problems.linked_list.essential import ez__merge_two_sorted_list
 
 from solutions import *
 
@@ -37,27 +38,33 @@ def solution_input():
 
                  ## ===== Two Pointers =====
                  # imp: ***
-                 'vali_palindrome': [ez_valid_palindrome.ValidPalindrome.great_ans1, "A man, a plan, a canal: Panama"], 
+                 'vali_palindrome': [ez__valid_palindrome.ValidPalindrome.great_ans1, "A man, a plan, a canal: Panama"], 
 
 
                  ## ===== Sliding Window =====
                  # imp: ***
-                 'best_time_to_buy_and_sell_stock': [ez_best_time_to_buy_and_sell_stock.BestTimeToBuyAndSellStock.great_ans1, [7,1,5,3,6,4]],
+                 'best_time_to_buy_and_sell_stock': [ez__best_time_to_buy_and_sell_stock.BestTimeToBuyAndSellStock.great_ans1, [7,1,5,3,6,4]],
                  
 
                  ## ===== Stack =====
                  # imp: ***
-                 'valid_parentheses': [ez_valid_parentheses.ValidParentheses.my_solution, "((([]){}))"],
+                 'valid_parentheses': [ez__valid_parentheses.ValidParentheses.my_solution, "((([]){}))"],
 
 
                  ## ===== Binary Search =====
                  # imp: ***
-                 'binary_search': [ez_binary_search.BinarySearch.great_ans1, [-1,0,3,5,9,12], 2],
+                 'binary_search': [ez__binary_search.BinarySearch.great_ans1, [-1,0,3,5,9,12], 2],
+
 
                  ## ===== Bit Manipulation =====
                  # imp: ***
-                'single_number': [ez_single_value.SingleNumber.great_ans1, [2,2,1]],
+                 'single_number': [ez__single_value.SingleNumber.great_ans1, [2,2,1]],
+                 
 
+                 ## ===== Linked List =====
+                 # imp: ***
+                 'merge_two_sorted_lists': [ez__merge_two_sorted_list.MergeTwoSortedLists.my_solution, 
+                                            transfer_list_to_linked_nodes([1,2,4]), transfer_list_to_linked_nodes([1,3,4])],
 
                  'palindrome_number_0': [PalindromeNumber.my_solution, 121],
                  'palindrome_number_1': [PalindromeNumber.great_ans1, 122],
@@ -71,9 +78,7 @@ def solution_input():
                  'longest_common_prefix_1': [LongestCommonPrefix.great_ans1, ["flower","flow","flight"]],
                  'longest_common_prefix_2': [LongestCommonPrefix.great_ans2, ["flower","flow","flight"]],
 
-                 'merge_two_sorted_lists_0': [MergeTwoSortedLists.my_solution, transfer_list_to_linked_nodes([1,2,4]), transfer_list_to_linked_nodes([1,3,4])],
-
-
+                 
                  'same_tree_0': [SameTree.my_solution, transfer_list_to_binary_treenode([1,2,3]), transfer_list_to_binary_treenode([1,2,3])],
                 }
     return questions
@@ -86,5 +91,5 @@ def main(q_name):
 
 if __name__ == '__main__':
     # input question name you want to execute as argument
-    main('single_number')
+    main('merge_two_sorted_lists')
 
