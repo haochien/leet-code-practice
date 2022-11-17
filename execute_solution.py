@@ -5,6 +5,7 @@ from problems.stack.essential import ez__valid_parentheses
 from problems.binary_search.essential import ez__binary_search
 from problems.bit_manipulation.essential import ez__single_value
 from problems.linked_list.essential import ez__merge_two_sorted_list
+from problems.trees.esenstial import ez__same_tree
 
 from solutions import *
 
@@ -66,6 +67,12 @@ def solution_input():
                  'merge_two_sorted_lists': [ez__merge_two_sorted_list.MergeTwoSortedLists.my_solution, 
                                             transfer_list_to_linked_nodes([1,2,4]), transfer_list_to_linked_nodes([1,3,4])],
 
+                 ## ===== Trees =====
+                 # imp: ***
+                 'same_tree': [ez__same_tree.SameTree.my_solution, transfer_list_to_binary_treenode([1,2,3]), 
+                               transfer_list_to_binary_treenode([1,2,3])],                           
+
+
                  'palindrome_number_0': [PalindromeNumber.my_solution, 121],
                  'palindrome_number_1': [PalindromeNumber.great_ans1, 122],
                  'palindrome_number_2': [PalindromeNumber.great_ans2, 121],
@@ -79,7 +86,7 @@ def solution_input():
                  'longest_common_prefix_2': [LongestCommonPrefix.great_ans2, ["flower","flow","flight"]],
 
                  
-                 'same_tree_0': [SameTree.my_solution, transfer_list_to_binary_treenode([1,2,3]), transfer_list_to_binary_treenode([1,2,3])],
+
                 }
     return questions
 
@@ -91,5 +98,5 @@ def main(q_name):
 
 if __name__ == '__main__':
     # input question name you want to execute as argument
-    main('merge_two_sorted_lists')
+    main('same_tree')
 
