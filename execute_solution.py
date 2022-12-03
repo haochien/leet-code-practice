@@ -8,6 +8,8 @@ from problems.linked_list.essential import ez__merge_two_sorted_list
 from problems.trees.esenstial import ez__same_tree
 from problems.string_problems.essential import ez__longest_common_prefix, ez__roman_to_integer
 
+from problems.heap_priority_queue.essential import fair__kth_largest_element_in_a_stream
+
 from problems.two_pointers.rest import ez__palindronme_number
 
 from timeit import default_timer as timer
@@ -19,8 +21,12 @@ def execute_solution(questions, q_name):
     arg = questions[q_name][1:]
 
     start = timer()
-    solution = questions[q_name][0](*arg)
+    if isinstance(questions[q_name][0], type):  # check whether the solution is written in class format
+        solution = questions[q_name][0](*arg).execute()
+    else:
+        solution = questions[q_name][0](*arg)
     end = timer()
+
     print("===================")
     print(f"solution: {solution} \nExecuting Time: {(end-start)/0.001} ms")
     print("===================")
@@ -70,10 +76,17 @@ def solution_input():
                  'merge_two_sorted_lists': [ez__merge_two_sorted_list.MergeTwoSortedLists.my_solution, 
                                             transfer_list_to_linked_nodes([1,2,4]), transfer_list_to_linked_nodes([1,3,4])],
 
+
                  ## ===== Trees =====
                  # imp: ***
                  'same_tree': [ez__same_tree.SameTree.my_solution, transfer_list_to_binary_treenode([1,2,3]), 
                                transfer_list_to_binary_treenode([1,2,3])],                           
+
+
+                 ## ===== Heap / Priority Queue =====
+                 # imp: ***
+                 'kth_largest_in_a_stream': [fair__kth_largest_element_in_a_stream.KthLargestInStream.GreatAns1, 3, [4, 5, 8, 2], 
+                                             [3, 5, 10, 9, 4]],       
 
 
                  ## ===== String Problems =====
@@ -92,5 +105,5 @@ def main(q_name):
 
 if __name__ == '__main__':
     # input question name you want to execute as argument
-    main('roman_to_integer')
+    main('kth_largest_in_a_stream')
 
