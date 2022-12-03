@@ -34,7 +34,7 @@ class KthLargestInStream:
         Time: O((n-k)logn) 
               --> when initiate class, it needs (n-k) times popping. So the worst case the big O will be nlogn
               --> more accurate is M * nlogn, M is determined by how many numbers you are going to add
-        https://leetcode.com/problems/longest-common-prefix/discuss/6911/Simple-Python-solution
+        https://www.youtube.com/watch?v=hOjcdrqMoQ8
 
         Note:
         Heap is a special tree structure in which each parent node is less than or equal to its child node. Then it is called a Min Heap.
