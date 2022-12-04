@@ -1,6 +1,7 @@
 from problems.hashing.essential import ez__two_sum, ez__contain_duplicate, ez__valid_anagram
 from problems.two_pointers.essential import ez__valid_palindrome
 from problems.sliding_window.essential import ez__best_time_to_buy_and_sell_stock
+from problems.dynamic_programming_1d.essential import ez__climbing_stairs
 from problems.stack.essential import ez__valid_parentheses
 from problems.binary_search.essential import ez__binary_search
 from problems.bit_manipulation.essential import ez__single_value
@@ -54,7 +55,10 @@ def solution_input():
                  ## ===== Sliding Window =====
                  # imp: ***
                  'best_time_to_buy_and_sell_stock': [ez__best_time_to_buy_and_sell_stock.BestTimeToBuyAndSellStock.great_ans1, [7,1,5,3,6,4]],
-                 
+
+                 ## ===== Dynamic Programming 1D =====
+                 # imp: ***
+                 'climbing_stairs': [ez__climbing_stairs.ClimbingStairs.great_ans2, 4],                
 
                  ## ===== Stack =====
                  # imp: ***
@@ -105,5 +109,5 @@ def main(q_name):
 
 if __name__ == '__main__':
     # input question name you want to execute as argument
-    main('kth_largest_in_a_stream')
+    main('climbing_stairs')
 
