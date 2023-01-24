@@ -1,5 +1,6 @@
+from problems.array.essenstial import ez__plus_one
 from problems.hashing.essential import ez__two_sum, ez__contain_duplicate, ez__valid_anagram
-from problems.two_pointers.essential import ez__valid_palindrome
+from problems.two_pointers.essential import ez__valid_palindrome, ez__Remove_Duplicates_from_Sorted_Array
 from problems.sliding_window.essential import ez__best_time_to_buy_and_sell_stock
 from problems.dynamic_programming_1d.essential import ez__climbing_stairs
 from problems.stack.essential import ez__valid_parentheses
@@ -37,6 +38,12 @@ def solution_input():
 
     # questions = {question_name: [function, *function_arg]}
     questions = {
+
+                 ## ===== General Array =====
+                 # imp: ***
+                 'plus_one': [ez__plus_one.PlusOne.my_solution, [1, 2, 3]],
+
+
                  ## ===== Array and Hashing =====
                  # imp: ***
                  'two_sum': [ez__two_sum.TwoSum.great_ans1, [2, 7, 11, 15], 18],
@@ -48,6 +55,7 @@ def solution_input():
                  ## ===== Two Pointers =====
                  # imp: ***
                  'vali_palindrome': [ez__valid_palindrome.ValidPalindrome.great_ans1, "A man, a plan, a canal: Panama"],
+                 'remove_duplicates_from_sorted_array': [ez__Remove_Duplicates_from_Sorted_Array.RemoveDuplicatesFromSortedArray.great_ans1, [0,0,1,1,1,2,2,3,3,4]],
                  # imp: *
                  'palindrome_number': [ez__palindronme_number.PalindromeNumber.my_solution, 121], 
 
@@ -109,5 +117,5 @@ def main(q_name):
 
 if __name__ == '__main__':
     # input question name you want to execute as argument
-    main('climbing_stairs')
+    main('plus_one')
 
