@@ -7,7 +7,7 @@ from problems.stack.essential import ez__valid_parentheses
 from problems.binary_search.essential import ez__binary_search, ez__sqrt
 from problems.bit_manipulation.essential import ez__single_value
 from problems.linked_list.essential import ez__merge_two_sorted_list
-from problems.trees.esenstial import ez__same_tree
+from problems.trees.esenstial import ez__same_tree, ez__binary_tree_inorder_traversal, ez__symmetric_tree
 from problems.string_problems.essential import ez__longest_common_prefix, ez__roman_to_integer
 
 from problems.heap_priority_queue.essential import fair__kth_largest_element_in_a_stream
@@ -95,7 +95,9 @@ def solution_input():
                  # imp: ***
                  'same_tree': [ez__same_tree.SameTree.my_solution, transfer_list_to_binary_treenode([1,2,3]), 
                                transfer_list_to_binary_treenode([1,2,3])],                           
-
+                 'binary_tree_inorder_traversal': [ez__binary_tree_inorder_traversal.BinaryTreeInorderTraversal.great_ans1, 
+                               transfer_list_to_binary_treenode([1,None,2,None,None,3,None])],
+                 'symmetric_tree': [ez__symmetric_tree.SymmetricTree.great_ans2, transfer_list_to_binary_treenode([1,2,2,3,4,4,3])],
 
                  ## ===== Heap / Priority Queue =====
                  # imp: ***
@@ -119,5 +121,5 @@ def main(q_name):
 
 if __name__ == '__main__':
     # input question name you want to execute as argument
-    main('merge_sorted_array')
+    main('symmetric_tree')
 
