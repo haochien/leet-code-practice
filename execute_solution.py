@@ -1,5 +1,5 @@
 from problems.array.essenstial import ez__plus_one
-from problems.hashing.essential import ez__two_sum, ez__contain_duplicate, ez__valid_anagram
+from problems.hashing.essential import ez__two_sum, ez__contain_duplicate, ez__valid_anagram, fair__group_anagrams
 from problems.two_pointers.essential import ez__valid_palindrome, ez__Remove_Duplicates_from_Sorted_Array, ez__merge_sorted_array
 from problems.sliding_window.essential import ez__best_time_to_buy_and_sell_stock
 from problems.dynamic_programming_1d.essential import ez__climbing_stairs
@@ -49,6 +49,9 @@ def solution_input():
                  # imp: ***
                  'two_sum': [ez__two_sum.TwoSum.great_ans1, [2, 7, 11, 15], 18],
                  'contains_duplicate': [ez__contain_duplicate.ContainsDuplicate.great_ans1, [0,0,1,2,3]],
+
+                 'group_anagrams': [fair__group_anagrams.GroupAnagrams.great_ans1, ["eat","tea","tan","ate","nat","bat"]],
+
                  # imp: **      
                  'valid_anagram': [ez__valid_anagram.ValidAnagram.great_ans1, "anagram", "nagaram"],
 
@@ -126,5 +129,5 @@ def main(q_name):
 
 if __name__ == '__main__':
     # input question name you want to execute as argument
-    main('sorted_array_to_bst')
+    main('group_anagrams')
 
