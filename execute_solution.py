@@ -3,9 +3,9 @@ from problems.hashing.essential import ez__two_sum, ez__contain_duplicate, ez__v
 from problems.two_pointers.essential import ez__valid_palindrome, ez__Remove_Duplicates_from_Sorted_Array, ez__merge_sorted_array, fair__two_sum_input_sorted
 from problems.sliding_window.essential import ez__best_time_to_buy_and_sell_stock
 from problems.dynamic_programming_1d.essential import ez__climbing_stairs
-from problems.stack.essential import ez__valid_parentheses
+from problems.stack.essential import ez__valid_parentheses, fair__min_stack
 from problems.binary_search.essential import ez__binary_search, ez__sqrt
-from problems.bit_manipulation.essential import ez__single_value
+from problems.bit_manipulation.essential import ez__single_value, ez__number_of_1_bits
 from problems.linked_list.essential import ez__merge_two_sorted_list
 from problems.trees.esenstial import ez__same_tree, ez__binary_tree_inorder_traversal, ez__symmetric_tree, ez__max_depth_of_binary_tree, \
                                      ez__sorted_array_to_binary_search_tree
@@ -77,6 +77,7 @@ def solution_input():
                  ## ===== Stack =====
                  # imp: ***
                  'valid_parentheses': [ez__valid_parentheses.ValidParentheses.my_solution, "((([]){}))"],
+                 'min_stack': [fair__min_stack.MinStack.MySolution],    
 
 
                  ## ===== Binary Search =====
@@ -88,7 +89,8 @@ def solution_input():
                  ## ===== Bit Manipulation =====
                  # imp: ***
                  'single_number': [ez__single_value.SingleNumber.great_ans1, [2,2,1]],
-                 
+                 'number_of_1_bits': [ez__number_of_1_bits.NumberOfOneBits.great_ans1, 0b00000000000000000000000000001011],
+
 
                  ## ===== Linked List =====
                  # imp: ***
@@ -130,5 +132,5 @@ def main(q_name):
 
 if __name__ == '__main__':
     # input question name you want to execute as argument
-    main('two_sum_input_sorted')
+    main('number_of_1_bits')
 
