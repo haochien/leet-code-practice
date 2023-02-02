@@ -21,8 +21,7 @@ class HouseRobber:
         Time: O(n) 
         Memory: O(1)
         Expination Sources:
-        https://www.youtube.com/watch?time_continue=1139&v=ktmzAZWkEZ0&embeds_euri=https%3A%2F%2Fneetcode.io%2F&source_ve_path=Mjg2NjYsMjM4NTE&feature=emb_title
-
+        https://youtu.be/73r3KWiEvyk
         """
         rob1, rob2 = 0, 0
 
@@ -31,7 +30,7 @@ class HouseRobber:
             temp = max(n + rob1, rob2)
             rob1 = rob2
             rob2 = temp
-            
+
         return rob2
 
     @staticmethod
