@@ -2,7 +2,7 @@ from problems.array.essenstial import ez__plus_one
 from problems.hashing.essential import ez__two_sum, ez__contain_duplicate, ez__valid_anagram, fair__group_anagrams
 from problems.two_pointers.essential import ez__valid_palindrome, ez__Remove_Duplicates_from_Sorted_Array, ez__merge_sorted_array, fair__two_sum_input_sorted
 from problems.sliding_window.essential import ez__best_time_to_buy_and_sell_stock
-from problems.dynamic_programming_1d.essential import ez__climbing_stairs, ez__min_cost_climbing_stairs, fair__house_robber
+from problems.dynamic_programming_1d.essential import ez__climbing_stairs, ez__min_cost_climbing_stairs, fair__house_robber, fair__house_robber2
 from problems.stack.essential import ez__valid_parentheses, fair__min_stack
 from problems.binary_search.essential import ez__binary_search, ez__sqrt
 from problems.bit_manipulation.essential import ez__single_value, ez__number_of_1_bits
@@ -74,7 +74,9 @@ def solution_input():
                  # imp: ***
                  'climbing_stairs': [ez__climbing_stairs.ClimbingStairs.great_ans2, 4],
                  'min_cost_climbing_stairs': [ez__min_cost_climbing_stairs.MinCostClimbingStairs.great_ans1, [10,15,20]], 
+                 
                  'house_robber': [fair__house_robber.HouseRobber.great_ans1, [4,7,8,6,10,20,1]], 
+                 'house_robber2': [fair__house_robber2.HouseRobber2.great_ans1, [1,3,1,3,100]], 
                                 
 
                  ## ===== Stack =====
@@ -135,5 +137,5 @@ def main(q_name):
 
 if __name__ == '__main__':
     # input question name you want to execute as argument
-    main('house_robber')
+    main('house_robber2')
 
