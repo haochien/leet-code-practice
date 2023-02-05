@@ -3,6 +3,7 @@ from problems.hashing.essential import ez__two_sum, ez__contain_duplicate, ez__v
 from problems.two_pointers.essential import ez__valid_palindrome, ez__Remove_Duplicates_from_Sorted_Array, ez__merge_sorted_array, fair__two_sum_input_sorted
 from problems.sliding_window.essential import ez__best_time_to_buy_and_sell_stock
 from problems.dynamic_programming_1d.essential import ez__climbing_stairs, ez__min_cost_climbing_stairs, fair__house_robber, fair__house_robber2
+from problems.dynamic_programming_2d.essensial import fair__unique_paths
 from problems.stack.essential import ez__valid_parentheses, fair__min_stack
 from problems.binary_search.essential import ez__binary_search, ez__sqrt
 from problems.bit_manipulation.essential import ez__single_value, ez__number_of_1_bits
@@ -70,6 +71,7 @@ def solution_input():
                  # imp: ***
                  'best_time_to_buy_and_sell_stock': [ez__best_time_to_buy_and_sell_stock.BestTimeToBuyAndSellStock.great_ans1, [7,1,5,3,6,4]],
 
+
                  ## ===== Dynamic Programming 1D =====
                  # imp: ***
                  'climbing_stairs': [ez__climbing_stairs.ClimbingStairs.great_ans2, 4],
@@ -77,8 +79,13 @@ def solution_input():
                  
                  'house_robber': [fair__house_robber.HouseRobber.great_ans1, [4,7,8,6,10,20,1]], 
                  'house_robber2': [fair__house_robber2.HouseRobber2.great_ans1, [1,3,1,3,100]], 
-                                
 
+
+                 ## ===== Dynamic Programming 2D =====
+                 # imp: ***
+                 'unique_paths': [fair__unique_paths.UniquePaths.great_ans1, 3, 7],
+
+                                
                  ## ===== Stack =====
                  # imp: ***
                  'valid_parentheses': [ez__valid_parentheses.ValidParentheses.my_solution, "((([]){}))"],
@@ -137,5 +144,5 @@ def main(q_name):
 
 if __name__ == '__main__':
     # input question name you want to execute as argument
-    main('house_robber2')
+    main('unique_paths')
 
