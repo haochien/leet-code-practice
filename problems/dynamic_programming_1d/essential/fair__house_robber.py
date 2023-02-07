@@ -67,4 +67,16 @@ class HouseRobber:
                 max_index = i+1
         return max(nums[i], nums[max_index])
 
-   
+
+    @staticmethod
+    def my_solution1(nums: List[int]) -> int:
+        if len(nums) <= 2:
+            return max(nums)
+
+        rob1, rob2 = nums[0], max(nums[0], nums[1])
+        for i in nums[2:]:
+            temp = max(rob1 + i, rob2)
+            rob1 = rob2
+            rob2 = temp
+
+        return rob2
