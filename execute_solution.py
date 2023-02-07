@@ -11,8 +11,8 @@ from problems.linked_list.essential import ez__merge_two_sorted_list
 from problems.trees.esenstial import ez__same_tree, ez__binary_tree_inorder_traversal, ez__symmetric_tree, ez__max_depth_of_binary_tree, \
                                      ez__sorted_array_to_binary_search_tree
 from problems.string_problems.essential import ez__longest_common_prefix, ez__roman_to_integer
-
 from problems.heap_priority_queue.essential import fair__kth_largest_element_in_a_stream
+from problems.grapgs.essensial import fair__number_of_islands
 
 from problems.two_pointers.rest import ez__palindronme_number
 
@@ -128,6 +128,12 @@ def solution_input():
                                              [3, 5, 10, 9, 4]],       
 
 
+                 ## ===== Graph Problems =====
+                 # imp: ***
+                 'number_of_islands': [fair__number_of_islands.NumberOfIslands.great_ans1, 
+                                        [["1","1","0","0","0"], ["1","1","0","0","0"], ["0","0","1","0","0"], ["0","0","0","1","1"]]],            
+
+
                  ## ===== String Problems =====
                  # imp: ***
                  'longest_common_prefix': [ez__longest_common_prefix.LongestCommonPrefix.great_ans1, ["flower","flow","flight"]],
@@ -144,5 +150,5 @@ def main(q_name):
 
 if __name__ == '__main__':
     # input question name you want to execute as argument
-    main('unique_paths')
+    main('number_of_islands')
 
