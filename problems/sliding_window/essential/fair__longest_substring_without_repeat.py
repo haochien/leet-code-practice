@@ -66,7 +66,7 @@ class LongestSubstringWithoutRepeat:
         while r < len(s) and l <= r:
             if s[r] not in checked:
                 checked.add(s[r])
-                longest_length = len(checked) if len(checked) > longest_length else longest_length
+                longest_length = max(len(checked), longest_length)
                 r += 1
             else:
                 checked.remove(s[l])
