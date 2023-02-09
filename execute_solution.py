@@ -12,7 +12,8 @@ from problems.trees.esenstial import ez__same_tree, ez__binary_tree_inorder_trav
                                      ez__sorted_array_to_binary_search_tree
 from problems.string_problems.essential import ez__longest_common_prefix, ez__roman_to_integer
 from problems.heap_priority_queue.essential import fair__kth_largest_element_in_a_stream
-from problems.grapgs.essensial import fair__number_of_islands
+from problems.graphs.essensial import fair__number_of_islands
+from problems.backtracking.essential import fair__subsets
 
 from problems.two_pointers.rest import ez__palindronme_number
 
@@ -135,6 +136,11 @@ def solution_input():
                                         [["1","1","0","0","0"], ["1","1","0","0","0"], ["0","0","1","0","0"], ["0","0","0","1","1"]]],            
 
 
+                 ## ===== Graph Problems =====
+                 # imp: ***
+                 'subsets': [fair__subsets.Subsets.great_ans1, [1,2,3]],   
+
+
                  ## ===== String Problems =====
                  # imp: ***
                  'longest_common_prefix': [ez__longest_common_prefix.LongestCommonPrefix.great_ans1, ["flower","flow","flight"]],
@@ -151,5 +157,5 @@ def main(q_name):
 
 if __name__ == '__main__':
     # input question name you want to execute as argument
-    main('longest_substring_without_repeat')
+    main('subsets')
 
