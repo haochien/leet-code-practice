@@ -14,6 +14,7 @@ from problems.string_problems.essential import ez__longest_common_prefix, ez__ro
 from problems.heap_priority_queue.essential import fair__kth_largest_element_in_a_stream
 from problems.graphs.essensial import fair__number_of_islands
 from problems.backtracking.essential import fair__subsets
+from problems.greedy.essential import fair__max_subarray
 
 from problems.two_pointers.rest import ez__palindronme_number
 
@@ -136,10 +137,15 @@ def solution_input():
                                         [["1","1","0","0","0"], ["1","1","0","0","0"], ["0","0","1","0","0"], ["0","0","0","1","1"]]],            
 
 
-                 ## ===== Graph Problems =====
+                 ## ===== Backtracking Problems =====
                  # imp: ***
                  'subsets': [fair__subsets.Subsets.great_ans1, [1,2,3]],   
 
+
+                 ## ===== Greedy Problems =====
+                 # imp: ***
+                 'max_subarray': [fair__max_subarray.MaxSubarray.my_solution, [-2,1,-3,4,-1,2,1,-5,4]],   
+                 
 
                  ## ===== String Problems =====
                  # imp: ***
@@ -157,5 +163,5 @@ def main(q_name):
 
 if __name__ == '__main__':
     # input question name you want to execute as argument
-    main('subsets')
+    main('max_subarray')
 
