@@ -48,7 +48,7 @@ class MaxSubarray:
 
 
     @staticmethod
-    def my_solution(nums: List[int]) -> int:
+    def great_ans2(nums: List[int]) -> int:
         """
         technique: dp
         Time: O(n)
