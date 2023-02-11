@@ -14,7 +14,7 @@ from problems.string_problems.essential import ez__longest_common_prefix, ez__ro
 from problems.heap_priority_queue.essential import fair__kth_largest_element_in_a_stream
 from problems.graphs.essensial import fair__number_of_islands
 from problems.backtracking.essential import fair__subsets
-from problems.greedy.essential import fair__max_subarray, fair__jump_game
+from problems.greedy.essential import fair__max_subarray, fair__jump_game, fair__jump_game2
 
 from problems.two_pointers.rest import ez__palindronme_number
 
@@ -146,6 +146,7 @@ def solution_input():
                  # imp: ***
                  'max_subarray': [fair__max_subarray.MaxSubarray.great_ans1, [-2,1,-3,4,-1,2,1,-5,4]],   
                  'jump_game': [fair__jump_game.JumpGame.my_solution, [1,2,0,1]],   
+                 'jump_game2': [fair__jump_game2.JumpGame2.great_ans1, [2,3,1,1,4]],   
                  
 
                  ## ===== String Problems =====
@@ -164,5 +165,5 @@ def main(q_name):
 
 if __name__ == '__main__':
     # input question name you want to execute as argument
-    main('jump_game')
+    main('jump_game2')
 
