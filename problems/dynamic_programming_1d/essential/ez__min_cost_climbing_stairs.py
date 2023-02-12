@@ -68,4 +68,24 @@ class MinCostClimbingStairs:
         
         return min(cost[0], cost[1])
 
-   
+
+
+
+    @staticmethod
+    def great_ans2(cost: List[int]) -> int:
+        """
+        technique:  bottom-up DP
+        Time: O(n) 
+        Memory: O(n)
+        Expination Sources:
+        https://leetcode.com/problems/min-cost-climbing-stairs/solutions/773865/a-beginner-s-guide-on-dp-validation-how-to-come-up-with-a-recursive-solution-python-3/?orderBy=most_votes
+        """
+        
+        def _dp(n):
+            if n < 2:
+                return cost[n]
+            return cost[n] + min(_dp(n-1), _dp(n-2))
+        
+        return min(_dp(len(cost)-1), _dp(len(cost)-2))
+
+
