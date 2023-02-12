@@ -12,6 +12,18 @@ class HouseRobber:
 
     Given an integer array nums representing the amount of money of each house, 
     return the maximum amount of money you can rob tonight without alerting the police.
+
+    Example 1:
+    Input: nums = [1,2,3,1]
+    Output: 4
+    Explanation: Rob house 1 (money = 1) and then rob house 3 (money = 3).
+    Total amount you can rob = 1 + 3 = 4.
+
+    Example 2:
+    Input: nums = [2,7,9,3,1]
+    Output: 12
+    Explanation: Rob house 1 (money = 2), rob house 3 (money = 9) and rob house 5 (money = 1).
+    Total amount you can rob = 2 + 9 + 1 = 12.
     """
 
     @staticmethod
@@ -33,8 +45,22 @@ class HouseRobber:
 
         return rob2
 
+    
     @staticmethod
     def my_solution(nums: List[int]) -> int:
+        if len(nums) <= 2:
+            return max(nums[0], max[1])
+
+        len_nums = len(nums)
+        nums.append(0)
+        for i in range(len_nums-3, -1, -1):
+            nums[i] += max(nums[i+2], nums[i+3])
+
+        return max(nums)
+    
+
+    @staticmethod
+    def my_solution1(nums: List[int]) -> int:
         """
         technique: Top-Down DP
         Time: O(n) 
@@ -69,7 +95,7 @@ class HouseRobber:
 
 
     @staticmethod
-    def my_solution1(nums: List[int]) -> int:
+    def my_solution2(nums: List[int]) -> int:
         if len(nums) <= 2:
             return max(nums)
 

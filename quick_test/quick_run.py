@@ -1,16 +1,8 @@
 
-def test_run(n):
-    if n <=2:
-        return n
-    
-    res = [-1] * n
-    res[0], res[1] = 1, 2
+def test_run(nums):
 
-    for i in range(2, n):
-        res[i] = res[i-1] + res[i-2]
-
-    return res[-1]
+    return
 
 if __name__ == '__main__':
-    result = test_run(4)
+    result = test_run([2,7,9,3,1])
     print(f"result: {result}")
