@@ -65,6 +65,8 @@ def solution_input():
                  'remove_duplicates_from_sorted_array': [ez__Remove_Duplicates_from_Sorted_Array.RemoveDuplicatesFromSortedArray.my_solution, [0,0,1,1,1,2,2,3,3,4]],
                  'merge_sorted_array': [ez__merge_sorted_array.MergeSortedArray.great_ans1, [1,2,3,0,0,0], 3, [2,5,6], 3],
                  'two_sum_input_sorted': [fair__two_sum_input_sorted.TwoSumInputSorted.my_solution, [2,7,11,15], 9],
+                 #----- review status: above question are reviewed and all ok -----
+
                  # imp: *
                  'palindrome_number': [ez__palindronme_number.PalindromeNumber.my_solution, 121], 
 
@@ -79,9 +81,9 @@ def solution_input():
                  # imp: ***
                  'climbing_stairs': [ez__climbing_stairs.ClimbingStairs.great_ans2, 4],
                  'min_cost_climbing_stairs': [ez__min_cost_climbing_stairs.MinCostClimbingStairs.great_ans1, [10,15,20]], 
-                 
                  'house_robber': [fair__house_robber.HouseRobber.great_ans1, [4,7,8,6,10,20,1]], 
                  'house_robber2': [fair__house_robber2.HouseRobber2.great_ans1, [1,3,1,3,100]], 
+                 #----- review status: need to review one more time -----
 
 
                  ## ===== Dynamic Programming 2D =====
