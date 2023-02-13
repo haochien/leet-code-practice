@@ -62,7 +62,7 @@ def solution_input():
                  ## ===== Two Pointers =====
                  # imp: ***
                  'vali_palindrome': [ez__valid_palindrome.ValidPalindrome.great_ans1, "A man, a plan, a canal: Panama"],
-                 'remove_duplicates_from_sorted_array': [ez__Remove_Duplicates_from_Sorted_Array.RemoveDuplicatesFromSortedArray.great_ans1, [0,0,1,1,1,2,2,3,3,4]],
+                 'remove_duplicates_from_sorted_array': [ez__Remove_Duplicates_from_Sorted_Array.RemoveDuplicatesFromSortedArray.my_solution, [0,0,1,1,1,2,2,3,3,4]],
                  'merge_sorted_array': [ez__merge_sorted_array.MergeSortedArray.great_ans1, [1,2,3,0,0,0], 3, [2,5,6], 3],
                  'two_sum_input_sorted': [fair__two_sum_input_sorted.TwoSumInputSorted.my_solution, [2,7,11,15], 9],
                  # imp: *

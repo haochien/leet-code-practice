@@ -1,24 +1,20 @@
 
-def test_run(nums1, m, nums2, n):
-    curr = m + n
-    m -= 1
-    n -= 1
-    while m >= 0 and n >= 0:
-        curr -= 1
-        if nums1[m] >= nums2[n]:
-            nums1[curr] = nums1[m]
-            m -= 1
-        else:
-            nums1[curr] = nums2[n]
-            n -= 1
-        
+def test_run(nums):
+    l, r = 0, 1
 
-    if m < n:
-        nums1[:curr] = nums2[:n+1]
+    k = 1
+    while r < len(nums):
+        if nums[l] != nums[r]:
+            l += 1
+            k += 1
+            nums[l] = nums[r]
+  
 
-    print(nums1)
-    return
+        r += 1
+
+    print(nums)
+    return k
 
 if __name__ == '__main__':
-    result = test_run(nums1 = [0], m = 0, nums2 = [1], n = 1)
+    result = test_run([0,0,1,1,1,2,2,3,3,4])
     print(f"result: {result}")

@@ -73,3 +73,24 @@ class RemoveDuplicatesFromSortedArray:
         nums[:] = sorted(set(nums))
         return len(nums)
     
+
+    @staticmethod
+    def my_solution(nums: List[int]) -> int:
+        """
+        technique: two pointers
+        Time: O(n)
+        Memory: O(1)
+        """
+
+        l, r = 0, 1
+        k = 1
+        while r < len(nums):
+            if nums[l] != nums[r]:
+                l += 1
+                k += 1
+                nums[l] = nums[r]
+    
+            r += 1
+            
+        print(nums)
+        return k
