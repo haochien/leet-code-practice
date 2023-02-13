@@ -83,14 +83,16 @@ class ClimbingStairs:
         So instead of going top-down and computing these values recursively, we compute them bottom-up, 
         starting with the base cases and building upon the previous values until we reach n. We use a dp array of length n + 1
         """
-
-        dp_array = [-1] * (n + 1)  # since the init index of python is 0, we set -1 for n=0, and we need (n+1) length array
-        dp_array[1], dp_array[2] = 1, 2  # base case: n=1 has only 1 way ; n=2 has two ways
-
-        for i in range(3, n+1):
-            dp_array[i] = dp_array[i-1] + dp_array[i-2]
+        if n <=2:
+            return n
         
-        return dp_array[n]
+        res = [-1] * n
+        res[0], res[1] = 1, 2  # base case: n=1 has only 1 way ; n=2 has two ways
+
+        for i in range(2, n):
+            res[i] = res[i-1] + res[i-2]
+
+        return res[-1]
 
 
 
