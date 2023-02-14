@@ -1,6 +1,7 @@
 from problems.array.essenstial import ez__plus_one
 from problems.hashing.essential import ez__two_sum, ez__contain_duplicate, ez__valid_anagram, fair__group_anagrams
-from problems.two_pointers.essential import ez__valid_palindrome, ez__Remove_Duplicates_from_Sorted_Array, ez__merge_sorted_array, fair__two_sum_input_sorted
+from problems.two_pointers.essential import ez__valid_palindrome, ez__Remove_Duplicates_from_Sorted_Array, ez__merge_sorted_array, fair__two_sum_input_sorted, \
+                                            fair_3sum
 from problems.sliding_window.essential import ez__best_time_to_buy_and_sell_stock, fair__longest_substring_without_repeat
 from problems.dynamic_programming_1d.essential import ez__climbing_stairs, ez__min_cost_climbing_stairs, fair__house_robber, fair__house_robber2
 from problems.dynamic_programming_2d.essensial import fair__unique_paths
@@ -66,6 +67,7 @@ def solution_input():
                  'merge_sorted_array': [ez__merge_sorted_array.MergeSortedArray.great_ans1, [1,2,3,0,0,0], 3, [2,5,6], 3],
                  'two_sum_input_sorted': [fair__two_sum_input_sorted.TwoSumInputSorted.my_solution, [2,7,11,15], 9],
                  #----- review status: above question are reviewed and all ok -----
+                 '3sum': [fair_3sum.SumThree.great_ans1, [-2,0,0,2,2]],
 
                  # imp: *
                  'palindrome_number': [ez__palindronme_number.PalindromeNumber.my_solution, 121], 
@@ -168,5 +170,5 @@ def main(q_name):
 
 if __name__ == '__main__':
     # input question name you want to execute as argument
-    main('jump_game2')
+    main('3sum')
 
