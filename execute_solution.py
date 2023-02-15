@@ -1,5 +1,5 @@
 from problems.array.essenstial import ez__plus_one
-from problems.hashing.essential import ez__two_sum, ez__contain_duplicate, ez__valid_anagram, fair__group_anagrams
+from problems.hashing.essential import ez__two_sum, ez__contain_duplicate, ez__valid_anagram, fair__group_anagrams, fair__top_k_frequent_element
 from problems.two_pointers.essential import ez__valid_palindrome, ez__Remove_Duplicates_from_Sorted_Array, ez__merge_sorted_array, fair__two_sum_input_sorted, \
                                             fair_3sum
 from problems.sliding_window.essential import ez__best_time_to_buy_and_sell_stock, fair__longest_substring_without_repeat
@@ -55,6 +55,7 @@ def solution_input():
                  'contains_duplicate': [ez__contain_duplicate.ContainsDuplicate.great_ans1, [0,0,1,2,3]],
 
                  'group_anagrams': [fair__group_anagrams.GroupAnagrams.great_ans1, ["eat","tea","tan","ate","nat","bat"]],
+                 'top_k_frequent_element': [fair__top_k_frequent_element.TopKFrequentElement.great_ans2, [3,3,3,4,4,5, 1,1,1,1,1,2,2,2,2], 5],
 
                  # imp: **      
                  'valid_anagram': [ez__valid_anagram.ValidAnagram.great_ans1, "anagram", "nagaram"],
@@ -170,5 +171,5 @@ def main(q_name):
 
 if __name__ == '__main__':
     # input question name you want to execute as argument
-    main('3sum')
+    main('top_k_frequent_element')
 
