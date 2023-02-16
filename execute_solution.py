@@ -10,7 +10,7 @@ from problems.binary_search.essential import ez__binary_search, ez__sqrt
 from problems.bit_manipulation.essential import ez__single_value, ez__number_of_1_bits
 from problems.linked_list.essential import ez__merge_two_sorted_list
 from problems.trees.esenstial import ez__same_tree, ez__binary_tree_inorder_traversal, ez__symmetric_tree, ez__max_depth_of_binary_tree, \
-                                     ez__sorted_array_to_binary_search_tree, ez__invert_binary_tree
+                                     ez__sorted_array_to_binary_search_tree, ez__invert_binary_tree, ez__diameter_of_binary_tree
 from problems.string_problems.essential import ez__longest_common_prefix, ez__roman_to_integer
 from problems.heap_priority_queue.essential import fair__kth_largest_element_in_a_stream
 from problems.graphs.essensial import fair__number_of_islands
@@ -130,6 +130,7 @@ def solution_input():
                                transfer_list_to_binary_treenode([3,9,20,None,None,15,7])],
                  'sorted_array_to_bst': [ez__sorted_array_to_binary_search_tree.SortedArrayToBST.great_ans1, [-10,-3,0,5,9]],               
                  'invert_binary_tree': [ez__invert_binary_tree.InvertBinaryTree.great_ans2, transfer_list_to_binary_treenode([4,2,7,1,3,6,9])],               
+                 'diameter_of_binary_tree': [ez__diameter_of_binary_tree.DiameterOfBT.great_ans1, transfer_list_to_binary_treenode([1,2])],               
 
 
                  ## ===== Heap / Priority Queue =====
@@ -172,5 +173,5 @@ def main(q_name):
 
 if __name__ == '__main__':
     # input question name you want to execute as argument
-    main('invert_binary_tree')
+    main('diameter_of_binary_tree')
 
