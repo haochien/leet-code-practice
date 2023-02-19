@@ -10,7 +10,9 @@ from problems.binary_search.essential import ez__binary_search, ez__sqrt
 from problems.bit_manipulation.essential import ez__single_value, ez__number_of_1_bits
 from problems.linked_list.essential import ez__merge_two_sorted_list
 from problems.trees.esenstial import ez__same_tree, ez__binary_tree_inorder_traversal, ez__symmetric_tree, ez__max_depth_of_binary_tree, \
-                                     ez__sorted_array_to_binary_search_tree
+                                     ez__sorted_array_to_binary_search_tree, ez__invert_binary_tree, ez__diameter_of_binary_tree, \
+                                     ez__balanced_binary_tree, ez__subtree_of_another_tree, fair__lowest_common_ancestor_of_bst, \
+                                     fair__binary_tree_level_order_traversal, fair__binary_tree_right_side_view, fair__count_good_nodes_in_binary_tree
 from problems.string_problems.essential import ez__longest_common_prefix, ez__roman_to_integer
 from problems.heap_priority_queue.essential import fair__kth_largest_element_in_a_stream
 from problems.graphs.essensial import fair__number_of_islands
@@ -129,6 +131,20 @@ def solution_input():
                  'max_depth_binary_tree': [ez__max_depth_of_binary_tree.MaxDepthBinaryTree.great_ans2, 
                                transfer_list_to_binary_treenode([3,9,20,None,None,15,7])],
                  'sorted_array_to_bst': [ez__sorted_array_to_binary_search_tree.SortedArrayToBST.great_ans1, [-10,-3,0,5,9]],               
+                 'invert_binary_tree': [ez__invert_binary_tree.InvertBinaryTree.great_ans2, transfer_list_to_binary_treenode([4,2,7,1,3,6,9])],               
+                 'diameter_of_binary_tree': [ez__diameter_of_binary_tree.DiameterOfBT.great_ans1, transfer_list_to_binary_treenode([1,2])],               
+                 'balanced_binary_tree': [ez__balanced_binary_tree.BalancedBT.my_solution, transfer_list_to_binary_treenode([1,2,2,3,3,None,None,4,4])],               
+                 'subtree_of_another_tree': [ez__subtree_of_another_tree.SubtreeOfAnotherTree.my_solution, 
+                               transfer_list_to_binary_treenode([3,4,5,1,2]), [4,1,2]],             
+
+                 'lowest_common_ancestor_of_bst': [fair__lowest_common_ancestor_of_bst.LowestCommonAncestorOfBST.my_solution, 
+                               transfer_list_to_binary_treenode([6,2,8,0,4,7,9, None, None,3,5]), 2, 8],      
+                 'binary_tree_level_order_traversal': [fair__binary_tree_level_order_traversal.BTLevelOrderTraversal.my_solution, 
+                               transfer_list_to_binary_treenode([3,9,20,None, None,15,7])],     
+                 'binary_tree_right_side_view': [fair__binary_tree_right_side_view.BTRightSideView.my_solution, 
+                               transfer_list_to_binary_treenode([1,2,3,None,5,None,4])],     
+                 'count_good_nodes_in_binary_tree': [fair__count_good_nodes_in_binary_tree.CountGoodNodesInBT.my_solution, 
+                               transfer_list_to_binary_treenode([3,1,4,3,None,1,5])],    
 
 
                  ## ===== Heap / Priority Queue =====
@@ -171,5 +187,5 @@ def main(q_name):
 
 if __name__ == '__main__':
     # input question name you want to execute as argument
-    main('top_k_frequent_element')
+    main('count_good_nodes_in_binary_tree')
 

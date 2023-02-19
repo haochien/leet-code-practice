@@ -1,17 +1,52 @@
+class BinaryTreeNode:
+    def __init__(self, val, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
 
-def test_run(s):
-
-    stack = []
-    dict_map = {"]":"[", "}":"{", ")":"("}
+def transfer_list_to_binary_treenode(lst):
+    if len(lst) == 0:
+        return None
     
-    for i in s:
-        if i not in dict_map:
-            stack.append(i)
-        else:
-            if len(stack) == 0 or dict_map[i] != stack.pop():
+    def _inner(index=0):
+        if len(lst) <= index or lst[index] is None:
+            return None
+        
+        node = BinaryTreeNode(lst[index])
+        node.left = _inner(2 * index + 1)
+        node.right = _inner(2 * index + 2)
+        return node
+    
+    return _inner()
+
+
+
+def test_run(root):
+
+    layer_nodes = [root]
+
+    while layer_nodes:
+        stack = []
+
+        for node in layer_nodes:
+            if node.left is None and node.right is None:
+                continue
+
+            if node.left is None or node.right is None:
                 return False
 
-    return True if len(stack) == 0 else False
+            if not (node.left.val < node.val < node.right.val):
+                return False
+
+            if node.left is not None:
+                stack.append(node.left)
+            
+            if node.right is not None:
+                stack.append(node.right)
+            
+        layer_nodes = stack
+    return True
+
 
 
 class TestRun:
@@ -50,6 +85,6 @@ class TestRun:
 
 
 if __name__ == '__main__':
-    result = test_run("([)]")
-    result = TestRun().execute()
+    result = test_run(transfer_list_to_binary_treenode([2,1,3]))
+    # result = TestRun().execute()
     print(f"result: {result}")
