@@ -26,6 +26,21 @@ class KokoEatBananas:
     Input: piles = [30,11,23,4,20], h = 6
     Output: 23
     """
+    @staticmethod
+    def great_ans1(piles: List[int], h: int) -> int:
+        l, r = 1, max(piles)
+
+        while l <= r:
+            k = (r - l) // 2 + l
+
+            if sum([ceil(b / k) for b in piles]) <= h:
+                r = k - 1
+            else:
+                l = k + 1
+
+        return l
+
+
 
     @staticmethod
     def my_solution(piles: List[int], h: int) -> int:

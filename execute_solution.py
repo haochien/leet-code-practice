@@ -6,7 +6,8 @@ from problems.sliding_window.essential import ez__best_time_to_buy_and_sell_stoc
 from problems.dynamic_programming_1d.essential import ez__climbing_stairs, ez__min_cost_climbing_stairs, fair__house_robber, fair__house_robber2
 from problems.dynamic_programming_2d.essensial import fair__unique_paths
 from problems.stack.essential import ez__valid_parentheses, fair__min_stack
-from problems.binary_search.essential import ez__binary_search, ez__sqrt, fair__search_a_2d_matrix, fair__koko_eating_bananas
+from problems.binary_search.essential import ez__binary_search, ez__sqrt, fair__search_a_2d_matrix, fair__koko_eating_bananas, \
+                                             fair__find_min_in_rotated_sorted_array
 from problems.bit_manipulation.essential import ez__single_value, ez__number_of_1_bits
 from problems.linked_list.essential import ez__merge_two_sorted_list
 from problems.trees.esenstial import ez__same_tree, ez__binary_tree_inorder_traversal, ez__symmetric_tree, ez__max_depth_of_binary_tree, \
@@ -109,6 +110,7 @@ def solution_input():
                  'sqrt': [ez__sqrt.Sqrt.great_ans1, 8],
                  'search_a_2d_matrix': [fair__search_a_2d_matrix.Search2DMatrix.my_solution, [[1,3,5,7],[10,11,16,20],[23,30,34,50]], 3],
                  'koko_eating_bananas': [fair__koko_eating_bananas.KokoEatBananas.my_solution, [3,6,7,11], 8],
+                 'find_min_in_rotated_sorted_array': [fair__find_min_in_rotated_sorted_array.FindMinRotateSortArray.my_solution, [3,1,2]],
 
 
                  ## ===== Bit Manipulation =====
@@ -189,5 +191,5 @@ def main(q_name):
 
 if __name__ == '__main__':
     # input question name you want to execute as argument
-    main('koko_eating_bananas')
+    main('find_min_in_rotated_sorted_array')
 
