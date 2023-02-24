@@ -7,9 +7,9 @@ from problems.dynamic_programming_1d.essential import ez__climbing_stairs, ez__m
 from problems.dynamic_programming_2d.essensial import fair__unique_paths
 from problems.stack.essential import ez__valid_parentheses, fair__min_stack
 from problems.binary_search.essential import ez__binary_search, ez__sqrt, fair__search_a_2d_matrix, fair__koko_eating_bananas, \
-                                             fair__find_min_in_rotated_sorted_array
+                                             fair__find_min_in_rotated_sorted_array, fair__search_in_rotated_array, fair__time_based_key_value_sort
 from problems.bit_manipulation.essential import ez__single_value, ez__number_of_1_bits
-from problems.linked_list.essential import ez__merge_two_sorted_list
+from problems.linked_list.essential import ez__merge_two_sorted_list, fair__reorder_list
 from problems.trees.esenstial import ez__same_tree, ez__binary_tree_inorder_traversal, ez__symmetric_tree, ez__max_depth_of_binary_tree, \
                                      ez__sorted_array_to_binary_search_tree, ez__invert_binary_tree, ez__diameter_of_binary_tree, \
                                      ez__balanced_binary_tree, ez__subtree_of_another_tree, fair__lowest_common_ancestor_of_bst, \
@@ -111,6 +111,8 @@ def solution_input():
                  'search_a_2d_matrix': [fair__search_a_2d_matrix.Search2DMatrix.my_solution, [[1,3,5,7],[10,11,16,20],[23,30,34,50]], 3],
                  'koko_eating_bananas': [fair__koko_eating_bananas.KokoEatBananas.my_solution, [3,6,7,11], 8],
                  'find_min_in_rotated_sorted_array': [fair__find_min_in_rotated_sorted_array.FindMinRotateSortArray.my_solution, [3,1,2]],
+                 'search_in_rotated_array': [fair__search_in_rotated_array.SearchInRotatedArray.my_solution, [8,1,2,3,4,5,6,7], 6],
+                 'time_based_key_value_sort': [fair__time_based_key_value_sort.TimeBasedKeyValueSort.GreatAns1],
 
 
                  ## ===== Bit Manipulation =====
@@ -123,6 +125,7 @@ def solution_input():
                  # imp: ***
                  'merge_two_sorted_lists': [ez__merge_two_sorted_list.MergeTwoSortedLists.my_solution, 
                                             transfer_list_to_linked_nodes([1,2,4]), transfer_list_to_linked_nodes([1,3,4])],
+                 'reorder_list': [fair__reorder_list.ReorderList.great_ans1,  transfer_list_to_linked_nodes([1,2,3,4])],
 
 
                  ## ===== Trees =====
@@ -191,5 +194,5 @@ def main(q_name):
 
 if __name__ == '__main__':
     # input question name you want to execute as argument
-    main('find_min_in_rotated_sorted_array')
+    main('reorder_list')
 
